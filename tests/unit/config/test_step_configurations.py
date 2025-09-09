@@ -87,9 +87,9 @@ def test_step_spec_pipeline_parameter_name_equality():
     """Tests the step spec equality operator regarding the pipeline parameter
     name."""
     assert StepSpec(
-        source="src", upstream_steps=[], pipeline_parameter_name="name"
+        source="src", upstream_steps=[], invocation_id="name"
     ) != StepSpec(
         source="src",
         upstream_steps=[],
-        pipeline_parameter_name="different_name",
+        invocation_id="different_name",
     )
